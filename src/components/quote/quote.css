@@ -1,0 +1,16 @@
+.quote {
+    font-size: 30px;
+    padding-left: 60px;
+    border-left: 8px solid #F7DF94;
+}
+
+.quote p {
+    max-width: 620px;
+}
+
+@media (max-width: 700px) {
+    .quote {
+        font-size: 24px;
+        padding-left: 40px;
+    }
+}

@@ -1,0 +1,39 @@
+.card {
+    padding: 30px 25px 30px 25px;
+    min-width: 600px;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s ease all;
+}
+
+.card:hover {
+    background-color: #333333;
+}
+
+.card:hover h3 {
+    color: #F2F2F2;
+}
+
+.info h3 {
+    color: #4F4F4F;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 4px;
+}
+
+.info h4 {
+    color: #828282;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@media (max-width: 700px) {
+    .card {
+        min-width: 250px;
+    }
+}

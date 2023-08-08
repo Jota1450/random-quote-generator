@@ -1,0 +1,57 @@
+.container {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 10px;
+    padding: 0 10px 0 10px;
+}
+
+header {
+    margin: 20px 0 20px 0;
+    text-align: end;
+}
+
+header button {
+    font-family: inherit;
+    color: #4F4F4F;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+footer {
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #828282;
+    margin: 10px auto;
+}
+
+footer a {
+    font-weight: 600;
+    color: #828282;
+    text-decoration: underline;
+}
+
+header button:hover .rotate-center {
+    animation: rotate-center 0.4s
+}
+
+header button:active {
+    position: relative;
+    top: 2px;
+}
+
+@keyframes rotate-center {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

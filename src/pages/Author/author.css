@@ -1,0 +1,7 @@
+.author-list {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
