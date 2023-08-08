@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router";
 import AutoRenew from "../../../assets/autorenew";
 import { useQuoteStore } from "../../../store/store";
+import { debounce } from "../../../services/utils";
 
 const Header = () => {
   const location = useLocation();
@@ -9,10 +10,10 @@ const Header = () => {
   const { fetchRandomQuote } = useQuoteStore((state) => ({
     fetchRandomQuote: state.fetchRandomQuote,
   }));
-
+  const fetch = debounce(fetchRandomQuote, 400);
   const handleClick = () => {
     if (location.pathname === "/") {
-      fetchRandomQuote();
+      fetch();
     } else {
       navigate("/");
     }

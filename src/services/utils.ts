@@ -16,6 +16,14 @@ export async function wrapFetch(
   return value;
 }
 
+export const debounce = (fn: () => unknown, ms = 300) => {
+  let timeoutId: ReturnType<typeof setTimeout>;
+  return function (this: any, ...args: any[]) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
+
 export const quoteMock: ApiResponse = {
   statusCode: 200,
   message: "Random quotes",
