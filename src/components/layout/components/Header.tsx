@@ -10,7 +10,7 @@ const Header = () => {
   const { fetchRandomQuote } = useQuoteStore((state) => ({
     fetchRandomQuote: state.fetchRandomQuote,
   }));
-  const fetch = debounce(fetchRandomQuote, 800);
+  const fetch = debounce(fetchRandomQuote, 400);
   const handleClick = () => {
     if (location.pathname === "/") {
       fetch();
